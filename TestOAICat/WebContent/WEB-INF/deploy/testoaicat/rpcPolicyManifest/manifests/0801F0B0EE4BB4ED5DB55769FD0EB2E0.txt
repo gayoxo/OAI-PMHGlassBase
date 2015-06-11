@@ -1,0 +1,2 @@
+serviceClass: fdi.ucm.es.oiac.client.GreetingService
+path: 6B150449584FB97318CEC48C2853C830.gwt.rpc

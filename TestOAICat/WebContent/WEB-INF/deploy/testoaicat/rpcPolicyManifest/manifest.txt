@@ -1,0 +1,3 @@
+# Module testoaicat
+# RPC service class, partial path of RPC policy file
+fdi.ucm.es.oiac.client.GreetingService, 6B150449584FB97318CEC48C2853C830.gwt.rpc

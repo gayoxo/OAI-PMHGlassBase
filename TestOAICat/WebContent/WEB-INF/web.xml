@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+         
+          <display-name>HolaGWT</display-name>
+    <description>
+      Dales Caña!
+    </description>
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>fdi.ucm.es.oiac.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/testoaicat/greet</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+      <param-name>properties</param-name>
+      <param-value>C:\apache-tomcat-7.0.62\webapps\oaicat\WEB-INF\oaicat.properties</param-value>
+    </context-param>
+  
+  
+   <servlet>
+      <servlet-name>OAIHandler</servlet-name>
+      <servlet-class>ORG.oclc.oai.server.OAIHandler</servlet-class>
+      <load-on-startup>5</load-on-startup>
+    </servlet>
+    
+    
+     <servlet-mapping>
+      <servlet-name>OAIHandler</servlet-name>
+      <url-pattern>/OAIHandler</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>OAIHandler</servlet-name>
+        <url-pattern>/servlet/OAIHandler</url-pattern>
+    </servlet-mapping>
+  
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>TestOAICat.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
